@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Meli_Integrador2</string>
+    <string name="tittleScreenHome">Not Bored</string>
+    <string name="participants">Participants</string>
+    <string name="inputNumberParticipants">Input Participants Number</string>
+    <string name="buttonStart">Start</string>
+    <string name="nameTermsAndConditions">Terms and conditions</string>
 </resources>
