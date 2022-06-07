@@ -1,11 +1,8 @@
 package com.example.meli_integrador2
 
 import android.content.Intent
-import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
 import com.example.meli_integrador2.databinding.ActivityMainBinding
 import com.example.meli_integrador2.utils.TextChangedListener
 
@@ -21,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.buttonStart.setOnClickListener {
             val intentToScreenActivities = Intent(this, Activities::class.java)
-            intentToScreenActivities.putExtra("", "") //TODO look at the putExtra
+            intentToScreenActivities.putExtra(getString(R.string.key_number_participants), binding.editTextParticipants.text) //TODO look at the putExtra
             startActivity(intentToScreenActivities)
         }
 
