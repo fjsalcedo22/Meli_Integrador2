@@ -5,4 +5,6 @@
     <string name="inputNumberParticipants">Input Participants Number</string>
     <string name="buttonStart">Start</string>
     <string name="nameTermsAndConditions">Terms and conditions</string>
+    <string name="please_enter_number_of_participants">please enter number of participants</string>
+    <string name="please_enter_number_other_than_0">Please enter number other than 0</string>
 </resources>
