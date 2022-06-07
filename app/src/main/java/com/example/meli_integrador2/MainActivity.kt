@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.meli_integrador2.databinding.ActivityMainBinding
 import com.example.meli_integrador2.utils.TextChangedListener
+import android.view.View
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,9 +24,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.textViewTermsAndConditions.setOnClickListener {
-           // binding.viewTermsAndConditions.visibility = View.VISIBLE
+            binding.relativeTerms.visibility = View.VISIBLE
         }
-
+        binding.ButtonTermsClose.setOnClickListener {
+            binding.relativeTerms.visibility = View.GONE
+        }
         binding.editTextParticipants.addTextChangedListener(TextChangedListener(binding.buttonStart, binding.editTextParticipants, this))
     }
 }
