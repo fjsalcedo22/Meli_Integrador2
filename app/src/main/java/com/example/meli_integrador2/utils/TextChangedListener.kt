@@ -16,7 +16,7 @@ class TextChangedListener(private val button: Button, private val editText: Edit
     override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
         s?.let {
             when{
-                it.toString() == "0" ->  editText.error = context.getString(R.string.please_enter_number_other_than_0)
+                it.isNotEmpty() && it.substring(0,1) == "0" ->  editText.error = context.getString(R.string.please_enter_number_other_than_0)
                 it.isNotEmpty() -> button.isEnabled = true
                 it.isEmpty() -> button.isEnabled = false
             }
