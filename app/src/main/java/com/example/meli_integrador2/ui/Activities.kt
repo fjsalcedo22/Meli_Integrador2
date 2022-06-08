@@ -1,8 +1,9 @@
-package com.example.meli_integrador2
+package com.example.meli_integrador2.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.meli_integrador2.R
 import com.example.meli_integrador2.databinding.ActivityActivitiesBinding
 import com.example.meli_integrador2.interfaces.OnItemClickListener
 import com.example.meli_integrador2.recycler.AdapterActivities

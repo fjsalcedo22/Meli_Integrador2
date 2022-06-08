@@ -1,4 +1,4 @@
-package com.example.meli_integrador2
+package com.example.meli_integrador2.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.example.meli_integrador2.databinding.ActivityMainBinding
 import com.example.meli_integrador2.utils.TextChangedListener
 import android.view.View
+import com.example.meli_integrador2.R
 
 class MainActivity : AppCompatActivity() {
 
