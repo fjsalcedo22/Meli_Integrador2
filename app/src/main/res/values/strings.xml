@@ -10,6 +10,7 @@
     <string name="please_enter_number_of_participants">please enter number of participants</string>
     <string name="please_enter_number_other_than_0">Please enter number other than 0</string>
     <string name="key_number_participants">numberParticipants</string>
+    <string name="description_image_button">image</string>
 
     <string name="terms_and_condition_text">Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos ridiculus iaculis,
     nullam ligula elementum duis tellus maecenas nec fermentum sed dictum
@@ -42,6 +43,8 @@
     faucibus turpis. Risus metus magnis aliquam accumsan laoreet congue per,
     tempus purus et odio senectus sodales vulputate, ligula malesu ada dis habitasse
     nullam pellentesque. </string>
+    
+    <string name="text_activities">Activities</string>
 
 
 </resources>

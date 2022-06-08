@@ -3,15 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.17835731414868106" />
+        <entry key="app/src/main/res/drawable/adapter_activitites_item.xml" value="0.2325" />
+        <entry key="app/src/main/res/drawable/arrow.xml" value="0.2325" />
         <entry key="app/src/main/res/drawable/background_button_start.xml" value="0.2985" />
         <entry key="app/src/main/res/drawable/background_button_start_blue_dark.xml" value="0.2985" />
         <entry key="app/src/main/res/drawable/background_button_start_blue_light.xml" value="0.403" />
         <entry key="app/src/main/res/drawable/background_button_start_blue_sure.xml" value="0.2985" />
         <entry key="app/src/main/res/drawable/close_x.xml" value="0.215" />
         <entry key="app/src/main/res/drawable/drawable_edit_text_participants.xml" value="0.2985" />
+        <entry key="app/src/main/res/drawable/image_random.xml" value="0.2325" />
+        <entry key="app/src/main/res/drawable/image_vector.xml" value="0.2325" />
+        <entry key="app/src/main/res/drawable/line_text_view_adater_activities.xml" value="0.2325" />
         <entry key="app/src/main/res/layout/activity_activities.xml" value="0.28425925925925927" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/adapter_activitites_item.xml" value="0.4005208333333333" />
         <entry key="app/src/main/res/layout/layout_prueba_terms.xml" value="0.40260416666666665" />
+        <entry key="app/src/main/res/layout/layout_terms_and_conditions.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/terms_and_conditions.xml" value="0.12864583333333332" />
       </map>
     </option>
   </component>
