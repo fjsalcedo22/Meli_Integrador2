@@ -9,10 +9,11 @@
     <LinearLayout
         android:id="@+id/linear"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="@color/darkBlue"
         android:orientation="horizontal"
-        android:paddingTop="64dp"
+        android:paddingTop="80dp"
+        android:paddingEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -35,16 +36,24 @@
 
     </LinearLayout>
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2"
+        />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerActivities"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:padding="16dp"
         android:background="@color/lightBlue"
+        android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linear" />
+        app:layout_constraintTop_toBottomOf="@+id/guideline" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
