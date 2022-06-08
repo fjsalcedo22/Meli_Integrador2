@@ -13,6 +13,7 @@
         android:background="@color/darkBlue"
         android:orientation="horizontal"
         android:paddingTop="80dp"
+        android:paddingStart="0dp"
         android:paddingEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +33,9 @@
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/image_random" />
+            android:background="@drawable/image_random"
+            android:contentDescription="@string/description_image_button"
+            />
 
     </LinearLayout>
 
