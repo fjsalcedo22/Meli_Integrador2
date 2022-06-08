@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".">
+
+    <ImageButton
+        android:id="@+id/ImageButtonSelectedSuggestionBackButton"
+        android:layout_width="46dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/checron"
+        android:contentDescription="@string/back_button"
+        app:layout_constraintBottom_toBottomOf="@+id/TextViewSelectedSuggestionTitle"
+        app:layout_constraintEnd_toStartOf="@+id/TextViewSelectedSuggestionTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TextViewSelectedSuggestionTitle"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="@string/category_title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TextViewSelectedSuggestionDescription"
+        android:layout_width="256dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginBottom="44dp"
+        android:gravity="center"
+        android:text="@string/activity_description"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/TextViewSelectedSuggestionParticipants"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewSelectedSuggestionTitle" />
+
+    <ImageView
+        android:id="@+id/ImageViewSelectedSuggestionParticipants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="328dp"
+        android:background="@drawable/person"
+        android:contentDescription="@string/participant_amount_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/TextViewSelectedSuggestionParticipants"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/TextViewSelectedSuggestionParticipants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="77dp"
+        android:text="@string/participants"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/TextViewSelectedSuggestionParticipantAmount"
+        app:layout_constraintStart_toEndOf="@+id/ImageViewSelectedSuggestionParticipants"
+        app:layout_constraintTop_toTopOf="@+id/ImageViewSelectedSuggestionParticipants" />
+
+    <TextView
+        android:id="@+id/TextViewSelectedSuggestionParticipantAmount"
+        android:layout_width="75dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="96dp"
+        android:text="@string/participant_amount"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TextViewSelectedSuggestionParticipants"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewSelectedSuggestionDescription" />
+
+    <ImageView
+        android:id="@+id/ImageViewSelectedSuggestionPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="39dp"
+        android:background="@drawable/money"
+        android:contentDescription="@string/price_icon"
+        app:layout_constraintEnd_toStartOf="@+id/TextViewSelectedSuggestionPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ImageViewSelectedSuggestionParticipants" />
+
+    <TextView
+        android:id="@+id/TextViewSelectedSuggestionPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="128dp"
+        android:text="@string/price"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/TextViewSelectedSuggestionPriceValue"
+        app:layout_constraintStart_toEndOf="@+id/ImageViewSelectedSuggestionPrice"
+        app:layout_constraintTop_toTopOf="@+id/ImageViewSelectedSuggestionPrice" />
+
+    <TextView
+        android:id="@+id/TextViewSelectedSuggestionPriceValue"
+        android:layout_width="74dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="56dp"
+        android:text="@string/price_value"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/TextViewSelectedSuggestionRandomCategoryName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TextViewSelectedSuggestionPrice"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewSelectedSuggestionParticipantAmount" />
+
+    <ImageView
+        android:id="@+id/ImageViewSelectedSuggestionRandomCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginBottom="152dp"
+        android:background="@drawable/list"
+        android:contentDescription="@string/random_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ImageViewSelectedSuggestionParticipants" />
+
+    <TextView
+        android:id="@+id/TextViewSelectedSuggestionRandomCategoryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:text="@string/category_name"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/ImageViewSelectedSuggestionRandomCategory"
+        app:layout_constraintTop_toTopOf="@+id/ImageViewSelectedSuggestionRandomCategory" />
+
+    <Button
+        android:id="@+id/ImageButtonSelectedSuggestionTryAnother"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/try_another"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
