@@ -19,6 +19,8 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/adapter_activitites_item.xml" value="0.4005208333333333" />
         <entry key="app/src/main/res/layout/layout_prueba_terms.xml" value="0.40260416666666665" />
+        <entry key="app/src/main/res/layout/layout_terms_and_conditions.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/terms_and_conditions.xml" value="0.12864583333333332" />
       </map>
     </option>
   </component>

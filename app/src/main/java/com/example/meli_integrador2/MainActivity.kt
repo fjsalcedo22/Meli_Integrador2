@@ -19,16 +19,25 @@ class MainActivity : AppCompatActivity() {
 
         binding.buttonStart.setOnClickListener {
             val intentToScreenActivities = Intent(this, Activities::class.java)
-            intentToScreenActivities.putExtra(getString(R.string.key_number_participants), binding.editTextParticipants.text) //TODO look at the putExtra
+            intentToScreenActivities.putExtra(
+                getString(R.string.key_number_participants),
+                binding.editTextParticipants.text.toString()
+            )
             startActivity(intentToScreenActivities)
         }
 
         binding.textViewTermsAndConditions.setOnClickListener {
-            binding.relativeTerms.visibility = View.VISIBLE
+            binding.layoutTerms.root.visibility = View.VISIBLE
         }
-        binding.ButtonTermsClose.setOnClickListener {
-            binding.relativeTerms.visibility = View.GONE
+        binding.layoutTerms.ButtonTermsClose.setOnClickListener {
+            binding.layoutTerms.root.visibility = View.GONE
         }
-        binding.editTextParticipants.addTextChangedListener(TextChangedListener(binding.buttonStart, binding.editTextParticipants, this))
+        binding.editTextParticipants.addTextChangedListener(
+            TextChangedListener(
+                binding.buttonStart,
+                binding.editTextParticipants,
+                this
+            )
+        )
     }
 }
