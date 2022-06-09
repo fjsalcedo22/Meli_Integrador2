@@ -48,65 +48,60 @@ class ScreenTips : AppCompatActivity() {
 
         CoroutineScope(Dispatchers.IO).launch {
 
-            try {
-                 val response = Retrofit.getRetrofit.run {
-                    typeCategory?.let {
-                        kotlin.run {
-                            binding.TextViewSelectedSuggestionTitle.text = it
-                            binding.linearTypeActivity.visibility = View.GONE
-                        }
-                        getActivity(it.lowercase(), participants)
-                    } ?: run {
-                        getActivityRandom(
-                            participants
-                        )
+            val response = Retrofit.getRetrofit.run {
+                typeCategory?.let {
+                    kotlin.run {
+                        binding.TextViewSelectedSuggestionTitle.text = it
+                        binding.linearTypeActivity.visibility = View.GONE
                     }
+                    getActivity(it.lowercase(), participants)
+                } ?: run {
+                    getActivityRandom(
+                        participants
+                    )
                 }
-
-                runOnUiThread {
-                    showViewError(View.VISIBLE)
-                    visibilityProgress(View.GONE)
-                    visibilityTextError(View.VISIBLE)
-                }
-                if (response.isSuccessful) {
-                    val activityResponse = response.body()
-
-                    activityResponse?.let {
-                        runOnUiThread {
-
-                            it.error?.let {
-                                binding.buttonSelectedTryAnother.visibility = View.GONE
-                                binding.layoutError.root.visibility = View.VISIBLE
-                                Handler().postDelayed({
-                                    finish()
-                                }, 3000)
-                                return@runOnUiThread
-                            }
-
-                            showViewError(View.GONE)
-                            binding.buttonSelectedTryAnother.visibility = View.VISIBLE
-                            binding.textViewTittleActivity.text = it.activity
-                            binding.TextViewParticipants.text = it.participants.toString()
-                            binding.TextViewRandomCategoryName.text = it.type.toString()
-                            val price: Float = it.price
-                            binding.TextViewPrice.text = price(price)
-
-
-                        }
-                    }
-                } else showViewError(View.VISIBLE)
-            }catch (e : Exception){
-                println("error ${e.message}")
             }
 
+            runOnUiThread {
+                showViewError(View.VISIBLE)
+                visibilityProgress(View.GONE)
+                visibilityTextError(View.VISIBLE)
+            }
+            if (response.isSuccessful) {
+                val activityResponse = response.body()
 
+                activityResponse?.let {
+                    runOnUiThread {
+
+                        it.error?.let {
+                            binding.buttonSelectedTryAnother.visibility = View.GONE
+                            binding.layoutError.root.visibility = View.VISIBLE
+                            Handler().postDelayed({
+                                finish()
+                            }, 3000)
+                            return@runOnUiThread
+                        }
+
+                        showViewError(View.GONE)
+                        binding.buttonSelectedTryAnother.visibility = View.VISIBLE
+                        binding.textViewTittleActivity.text = it.activity
+                        binding.TextViewParticipants.text = it.participants.toString()
+                        binding.TextViewRandomCategoryName.text = it.type.toString()
+                        val price: Float = it.price
+                        binding.TextViewPrice.text = price(price)
+
+
+                    }
+                }
+            } else showViewError(View.VISIBLE)
 
         }
     }
 
-    private fun showViewError(visibility: Int){
+    private fun showViewError(visibility: Int) {
         binding.layoutError.root.visibility = visibility
     }
+
     private fun visibilityProgress(visibility: Int) {
         binding.layoutError.progressBar.visibility = visibility
     }
