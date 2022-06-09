@@ -1,5 +1,8 @@
 package com.example.meli_integrador2.model
 
+/**
+  POJO conversion class
+ */
 data class Activity(
     val activity        : String,
     val type            : String? = null,

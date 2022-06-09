@@ -8,6 +8,11 @@ import android.widget.EditText
 import com.example.meli_integrador2.R
 import com.example.meli_integrador2.databinding.ActivityMainBinding
 
+
+/**
+  - class that inherits from TextWatcher that implements three methods which are used to listen to what is written in the edit text
+   - this class receives several parameters which are the start button, editText, context, binding, which are used for the respective validations and display errors
+ */
 class TextChangedListener(
     private val button: Button,
     private val editText: EditText,
@@ -20,6 +25,7 @@ class TextChangedListener(
     }
 
     override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+        // obtaining what is written in each editText to do the respective validations
         s?.let {
             when{
                 (editText == binding.editTextParticipants) && it.isNotEmpty() && it.substring(0,1) == "0" ->  editText.error = context.getString(R.string.please_enter_number_other_than_0)
@@ -34,7 +40,7 @@ class TextChangedListener(
         // Nothing
     }
 
-    private fun price(price: Float): Boolean {
+    private fun price(price: Float): Boolean { // return Boolean if (price in 0.0..1.0)
         return (price in 0.0..1.0)
     }
 }
