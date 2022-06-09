@@ -1,5 +1,6 @@
 package com.example.meli_integrador2.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,35 +22,33 @@ class Activities : AppCompatActivity(), OnItemClickListener {
         binding = ActivityActivitiesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        participants = intent.getStringExtra(getString(R.string.key_number_participants)).toString()
+
         val list = resources.getStringArray(R.array.list_activities)
         adapter = AdapterActivities(list, this)
         binding.recyclerActivities.layoutManager = LinearLayoutManager(this)
         binding.recyclerActivities.adapter = adapter
 
         binding.imageButtonRandom.setOnClickListener {
-            getActivityWebService()
+            intentToScreenTips()
         }
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        participants = intent.getStringExtra(getString(R.string.key_number_participants)).toString()
     }
 
     override fun onItemClick(category: String) {
-        getActivityWebService(category)
+        intentToScreenTips(category)
     }
 
-    private fun getActivityWebService(category: String? = null) {
-
-        CoroutineScope(Dispatchers.IO).launch {
-            val response = Retrofit.getRetrofit.run {
-                category?.let { getActivity(it.lowercase(), participants) } ?: getActivityrandom(
-                    participants
-                )
-            }
-            println(response.code())
-            if (response.isSuccessful)
-                println(response.body())
-            else
-                println(response.errorBody())
-        }
+    private fun intentToScreenTips(category: String? = null) {
+        val intent = Intent(this, ScreenTips::class.java)
+        intent.putExtra(getString(R.string.key_number_participants), participants)
+        intent.putExtra(getString(R.string.key_type_category), category)
+        startActivity(intent)
     }
+
+
 }
