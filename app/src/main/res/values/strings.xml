@@ -62,6 +62,8 @@
     <string name="text_random">Random</string>
     <string name="error_please_try_again">Error, Please try again \nother category</string>
     <string name="try_again">Try Again</string>
+    <string name="accept">Accept</string>
+    <string name="no_accept">No Accept</string>
 
 
 </resources>
