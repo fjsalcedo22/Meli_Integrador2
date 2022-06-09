@@ -13,6 +13,7 @@ class Activities : AppCompatActivity(), OnItemClickListener {
     private lateinit var binding: ActivityActivitiesBinding
     private lateinit var adapter: AdapterActivities
     private lateinit var participants: String
+    private lateinit var price: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityActivitiesBinding.inflate(layoutInflater)
@@ -33,6 +34,7 @@ class Activities : AppCompatActivity(), OnItemClickListener {
     override fun onResume() {
         super.onResume()
         participants = intent.getStringExtra(getString(R.string.key_number_participants)).toString()
+        price = intent.getStringExtra(getString(R.string.key_price)).toString()
     }
 
     override fun onItemClick(category: String) {
@@ -42,6 +44,7 @@ class Activities : AppCompatActivity(), OnItemClickListener {
     private fun intentToScreenTips(category: String? = null) {
         val intent = Intent(this, ScreenTips::class.java)
         intent.putExtra(getString(R.string.key_number_participants), participants)
+        intent.putExtra(getString(R.string.key_price), price)
         intent.putExtra(getString(R.string.key_type_category), category)
         startActivity(intent)
     }

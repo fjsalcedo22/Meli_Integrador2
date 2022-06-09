@@ -3,13 +3,15 @@
     <string name="app_title">Not Bored</string>
     <string name="app_name">Meli_Integrador2</string>
     <string name="tittleScreenHome">Not Bored</string>
-    <string name="participants">Participants</string>
+    <string name="participants">Participants *</string>
     <string name="inputNumberParticipants">Input Participants Number</string>
     <string name="buttonStart">Start</string>
     <string name="nameTermsAndConditions">Terms and conditions</string>
-    <string name="please_enter_number_of_participants">please enter number of participants</string>
+    <string name="please_enter_number_of_participants">Please enter number of participants</string>
+    <string name="please_enter_price_between">Please enter price between o and 1</string>
     <string name="please_enter_number_other_than_0">Please enter number other than 0</string>
     <string name="key_number_participants">numberParticipants</string>
+    <string name="key_price">price</string>
     <string name="key_type_category">typeCategory</string>
     <string name="description_image_button">image</string>
 
@@ -44,7 +46,7 @@
     faucibus turpis. Risus metus magnis aliquam accumsan laoreet congue per,
     tempus purus et odio senectus sodales vulputate, ligula malesu ada dis habitasse
     nullam pellentesque. </string>
-    
+
     <string name="text_activities">Activities</string>
 
     <string name="not_bored">Not Bored</string>
@@ -64,6 +66,7 @@
     <string name="try_again">Try Again</string>
     <string name="accept">Accept</string>
     <string name="no_accept">No Accept</string>
+    <string name="text_view_price">Price *</string>
 
 
 </resources>

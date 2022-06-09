@@ -30,6 +30,10 @@ class MainActivity : AppCompatActivity() {
                 getString(R.string.key_number_participants),
                 binding.editTextParticipants.text.toString()
             )
+            intentToScreenActivities.putExtra(
+                getString(R.string.key_price),
+                binding.editTextPrice.text.toString()
+            )
             startActivity(intentToScreenActivities)
         }
 
@@ -37,12 +41,23 @@ class MainActivity : AppCompatActivity() {
             TextChangedListener(
                 binding.buttonStart,
                 binding.editTextParticipants,
-                this
+                this,
+                binding
+
+            )
+        )
+
+        binding.editTextPrice.addTextChangedListener(
+            TextChangedListener(
+                binding.buttonStart,
+                binding.editTextPrice,
+                this,
+                binding
             )
         )
     }
 
-    private fun visibilityTerms(visibility: Int){
+    private fun visibilityTerms(visibility: Int) {
         binding.layoutTerms.root.visibility = visibility
     }
 }
