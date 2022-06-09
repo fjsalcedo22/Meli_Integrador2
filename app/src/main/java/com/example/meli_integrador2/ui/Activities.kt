@@ -8,10 +8,6 @@ import com.example.meli_integrador2.R
 import com.example.meli_integrador2.databinding.ActivityActivitiesBinding
 import com.example.meli_integrador2.interfaces.OnItemClickListener
 import com.example.meli_integrador2.recycler.AdapterActivities
-import com.example.meli_integrador2.webService.Retrofit
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
 class Activities : AppCompatActivity(), OnItemClickListener {
     private lateinit var binding: ActivityActivitiesBinding

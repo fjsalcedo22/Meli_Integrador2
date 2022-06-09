@@ -22,9 +22,9 @@ class ScreenTips : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        showViewerror(View.VISIBLE)
-        visivilityProgress(View.VISIBLE)
-        visivilityTextError(View.GONE)
+        showViewError(View.VISIBLE)
+        visibilityProgress(View.VISIBLE)
+        visibilityTextError(View.GONE)
         binding.buttonSelectedTryAnother.visibility = View.GONE
 
 
@@ -61,9 +61,9 @@ class ScreenTips : AppCompatActivity() {
                 }
             }
             runOnUiThread {
-                showViewerror(View.VISIBLE)
-                visivilityProgress(View.GONE)
-                visivilityTextError(View.VISIBLE)
+                showViewError(View.VISIBLE)
+                visibilityProgress(View.GONE)
+                visibilityTextError(View.VISIBLE)
             }
             if (response.isSuccessful) {
                 val activityResponse = response.body()
@@ -80,7 +80,7 @@ class ScreenTips : AppCompatActivity() {
                             return@runOnUiThread
                         }
 
-                        showViewerror(View.GONE)
+                        showViewError(View.GONE)
                         binding.buttonSelectedTryAnother.visibility = View.VISIBLE
                         binding.textViewTittleActivity.text = it.activity
                         binding.TextViewParticipants.text = it.participants.toString()
@@ -91,19 +91,19 @@ class ScreenTips : AppCompatActivity() {
 
                     }
                 }
-            } else showViewerror(View.VISIBLE)
+            } else showViewError(View.VISIBLE)
 
         }
     }
 
-    private fun showViewerror(visibility: Int){
+    private fun showViewError(visibility: Int){
         binding.layoutError.root.visibility = visibility
     }
-    private fun visivilityProgress(visibility: Int) {
+    private fun visibilityProgress(visibility: Int) {
         binding.layoutError.progressBar.visibility = visibility
     }
 
-    private fun visivilityTextError(visibility: Int) {
+    private fun visibilityTextError(visibility: Int) {
         binding.layoutError.textError.visibility = visibility
     }
 
