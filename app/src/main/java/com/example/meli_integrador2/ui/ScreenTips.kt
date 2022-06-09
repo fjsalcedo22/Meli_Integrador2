@@ -47,51 +47,59 @@ class ScreenTips : AppCompatActivity() {
     private fun getActivityWebService() {
 
         CoroutineScope(Dispatchers.IO).launch {
-            val response = Retrofit.getRetrofit.run {
-                typeCategory?.let {
-                    kotlin.run {
-                        binding.TextViewSelectedSuggestionTitle.text = it
-                        binding.linearTypeActivity.visibility = View.GONE
-                    }
-                    getActivity(it.lowercase(), participants)
-                } ?: run {
-                    getActivityrandom(
-                        participants
-                    )
-                }
-            }
-            runOnUiThread {
-                showViewError(View.VISIBLE)
-                visibilityProgress(View.GONE)
-                visibilityTextError(View.VISIBLE)
-            }
-            if (response.isSuccessful) {
-                val activityResponse = response.body()
 
-                activityResponse?.let {
-                    runOnUiThread {
-
-                        it.error?.let {
-                            binding.buttonSelectedTryAnother.visibility = View.GONE
-                            binding.layoutError.root.visibility = View.VISIBLE
-                            Handler().postDelayed({
-                                finish()
-                            }, 3000)
-                            return@runOnUiThread
+            try {
+                 val response = Retrofit.getRetrofit.run {
+                    typeCategory?.let {
+                        kotlin.run {
+                            binding.TextViewSelectedSuggestionTitle.text = it
+                            binding.linearTypeActivity.visibility = View.GONE
                         }
-
-                        showViewError(View.GONE)
-                        binding.buttonSelectedTryAnother.visibility = View.VISIBLE
-                        binding.textViewTittleActivity.text = it.activity
-                        binding.TextViewParticipants.text = it.participants.toString()
-                        binding.TextViewRandomCategoryName.text = it.type.toString()
-                        val price: Float = it.price
-                        binding.TextViewPrice.text = price(price)
-
-
+                        getActivity(it.lowercase(), participants)
+                    } ?: run {
+                        getActivityRandom(
+                            participants
+                        )
                     }
                 }
-            } else showViewError(View.VISIBLE)
+
+                runOnUiThread {
+                    showViewError(View.VISIBLE)
+                    visibilityProgress(View.GONE)
+                    visibilityTextError(View.VISIBLE)
+                }
+                if (response.isSuccessful) {
+                    val activityResponse = response.body()
+
+                    activityResponse?.let {
+                        runOnUiThread {
+
+                            it.error?.let {
+                                binding.buttonSelectedTryAnother.visibility = View.GONE
+                                binding.layoutError.root.visibility = View.VISIBLE
+                                Handler().postDelayed({
+                                    finish()
+                                }, 3000)
+                                return@runOnUiThread
+                            }
+
+                            showViewError(View.GONE)
+                            binding.buttonSelectedTryAnother.visibility = View.VISIBLE
+                            binding.textViewTittleActivity.text = it.activity
+                            binding.TextViewParticipants.text = it.participants.toString()
+                            binding.TextViewRandomCategoryName.text = it.type.toString()
+                            val price: Float = it.price
+                            binding.TextViewPrice.text = price(price)
+
+
+                        }
+                    }
+                } else showViewError(View.VISIBLE)
+            }catch (e : Exception){
+                println("error ${e.message}")
+            }
+
+
 
         }
     }

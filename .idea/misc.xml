@@ -22,8 +22,9 @@
         <entry key="app/src/main/res/layout/layout_prueba_terms.xml" value="0.40260416666666665" />
         <entry key="app/src/main/res/layout/layout_terms_and_conditions.xml" value="0.33" />
         <entry key="app/src/main/res/layout/loading.xml" value="0.38697916666666665" />
+        <entry key="app/src/main/res/layout/network_security_config.xml" value="0.375" />
         <entry key="app/src/main/res/layout/screen_error.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/terms_and_conditions.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/terms_and_conditions.xml" value="0.5" />
       </map>
     </option>
   </component>
