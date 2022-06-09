@@ -3,13 +3,16 @@
     <string name="app_title">Not Bored</string>
     <string name="app_name">Meli_Integrador2</string>
     <string name="tittleScreenHome">Not Bored</string>
-    <string name="participants">Participants</string>
+    <string name="participants">Participants *</string>
     <string name="inputNumberParticipants">Input Participants Number</string>
     <string name="buttonStart">Start</string>
     <string name="nameTermsAndConditions">Terms and conditions</string>
-    <string name="please_enter_number_of_participants">please enter number of participants</string>
+    <string name="please_enter_number_of_participants">Please enter number of participants</string>
+    <string name="please_enter_price_between">Please enter price between o and 1</string>
     <string name="please_enter_number_other_than_0">Please enter number other than 0</string>
     <string name="key_number_participants">numberParticipants</string>
+    <string name="key_price">price</string>
+    <string name="key_type_category">typeCategory</string>
     <string name="description_image_button">image</string>
 
     <string name="terms_and_condition_text">Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos ridiculus iaculis,
@@ -43,8 +46,27 @@
     faucibus turpis. Risus metus magnis aliquam accumsan laoreet congue per,
     tempus purus et odio senectus sodales vulputate, ligula malesu ada dis habitasse
     nullam pellentesque. </string>
-    
+
     <string name="text_activities">Activities</string>
+
+    <string name="not_bored">Not Bored</string>
+    <string name="activity_description">Description</string>
+    <string name="participant_amount">Participant Amount</string>
+    <string name="price">Price</string>
+    <string name="price_value">Price Value</string>
+    <string name="category_name">Category Name</string>
+    <string name="try_another">Try Another</string>
+    <string name="random_icon">Random Icon</string>
+    <string name="price_icon">Price Icon</string>
+    <string name="participant_amount_icon">Participant Amount Icon</string>
+    <string name="back_button">Back Button</string>
+    <string name="random">Random</string>
+    <string name="text_random">Random</string>
+    <string name="error_please_try_again">Error, Please try again \nother category</string>
+    <string name="try_again">Try Again</string>
+    <string name="accept">Accept</string>
+    <string name="no_accept">No Accept</string>
+    <string name="text_view_price">Price *</string>
 
 
 </resources>

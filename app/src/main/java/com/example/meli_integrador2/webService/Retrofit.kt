@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object Retrofit {  // Singlenton
 
-    val getRetrofit by lazy {
+    val getRetrofit: APIService by lazy {
         Retrofit.Builder()
             .baseUrl("http://www.boredapi.com/api/")
             .addConverterFactory(GsonConverterFactory.create())
